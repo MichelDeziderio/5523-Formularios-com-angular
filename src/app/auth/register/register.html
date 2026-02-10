@@ -1,0 +1,41 @@
+<section class="auth">
+  <div class="card auth__card">
+    <div class="auth__grid">
+      <div class="auth__arts">
+        <div class="images">
+          <img src="assets/cadastro_desktop.png" alt="Faça seu cadastro">
+          <img src="assets/cadastro_mobile.png" alt="Faça seu cadatro">
+        </div>
+      </div>
+
+      <div class="auth__form">
+        <h2 class="auth__form__title">Cadastro</h2>
+        <p class="auth__form__subtitle">Preencha os campos abaixo para criar sua conta.</p>
+
+        <form (ngSubmit)="save()" [formGroup]="form" class="form">
+          <div class="field">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" class="input" formControlName="name" placeholder="Seu nome">
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" class="input" formControlName="email" placeholder="seu e-mail">
+          </div>
+          <div class="field">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" class="input" formControlName="password" placeholder="Crie sua senha">
+          </div>
+
+          <label for="privacy" class="check">
+            <input type="checkbox" name="privacy" id="privacy" formControlName="privacy">
+            Li e estou ciente quanto a política de privacidade
+          </label>
+
+          <div class="actions">
+            <button class="btn primary">Abrir conta</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
